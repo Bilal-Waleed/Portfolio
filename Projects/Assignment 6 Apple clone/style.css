@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+.navbarr{
+    position: fixed;
+    background-color: rgba((223, 222, 222), 0.8);
+    color: black;
+    z-index: 1;
+    width: 100vw;
+    
+}
+.nav-mainn{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    background-color: rgba(223, 222, 222, 0.8);
+
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 35px;
+
+}
+.nav-logoo{
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: -2rem;
+
+}
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+.navEnd-logo{
+    display: flex;
+    margin-left: 30px;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.nav-logo3{
+    display: none;
+}
+
+.first-mainn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5F5F7;
+    
+}
+.firstbackg-img{
+    background: url(./assests/first-bg\ img.png) no-repeat center center/cover; 
+    width: 100vw;
+    margin-top: 40px;
+    height: 75vh;
+
+}
+
+.imgshop-btn button{
+    background: transparent;
+    color: #0066CC;
+    border-radius: 40px;
+    border: 1px solid #016dd9;
+    font-size: 17px;
+    padding: 11px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.firstmain-btn:hover{
+    background-color: #0176ec;
+    color: white;
+}
+.border-div{
+    border: 10px solid rgb(231, 228, 228);
+}
+
+.second-main{
+    background: url(./assests/2nd\ background\ image.jpeg) no-repeat center center/cover;
+    height: 80vh;
+    margin-top: 10px;
+
+}
+.textSecond-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textSecond-main h1{
+    font-size: 54px;
+}
+.textSecond-main p{
+    font-size: 30px;
+}
+.btnSecond-main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ 
+}
+.btn2-main{
+    background-color: #047af0;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn2-main:hover{
+    background-color: #0071e2;
+}
+.btn2nd-main{
+    background: transparent;
+    color: #0066CC;
+    border-radius: 35px;
+    border: 1px solid #016dd9;
+    font-size: 17px;
+    padding: 11px 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn2nd-main:hover{
+    background-color: #0176ec;
+    color: white;
+}
+.thired-main{
+    background: url(./assests/3rd\ background\ image.jpeg) no-repeat center center/cover;
+    height: 70vh;
+    background-color: black;
+}
+.textThired-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textThired-main h1{
+    font-size: 54px;
+    color: white;
+    margin-bottom: 20px;
+}
+.textThired-main p{
+    font-size: 24px;
+    color: white;
+    margin-top: -20px;
+}
+.btnThired-main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.btn3-main{
+    background-color: #047af0;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn3-main:hover{
+    background-color: #0071e2;
+
+}
+.btn3rd-main{
+    background: transparent;
+    color: #0066CC;
+    border-radius: 40px;
+    border: 1px solid #016dd9;
+    font-size: 17px;
+    padding: 11px 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn3rd-main:hover{
+    background-color: #0176ec;
+    color: white;
+}
+
+.main-container{
+    background-color: rgb(244, 239, 239);
+}
+.container-1{
+    display: flex;
+}
+.first-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 1.jpeg) no-repeat center/cover;
+}
+.textfirst-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textfirst-cont h1{
+    font-size: 44px;
+    color: white;
+    font-weight: 500;
+}
+.textfirst-cont p{
+    font-size: 20px;
+    color: white;
+}
+.btnfirst-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.btn1-cont{
+    background-color: #f8f9fa;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn1-cont:hover{
+    background-color: #f0f0f0;
+
+}
+.btn1st-cont{
+    background: transparent;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #ffffff;
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn1st-cont:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.second-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 2.jpeg) no-repeat center/cover;
+}
+
+.textsecond-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textsecond-cont h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.textsecond-cont p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: -15px;
+}
+.p2{
+    font-weight: 200;
+}
+.btnsecond-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn2-cont{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn2-cont:hover{
+    background-color: #0071e2;
+
+}
+.btn2nd-cont{
+    background: transparent;
+    color: #047af0;
+    border-radius: 40px;
+    border: 1px solid #047af0;
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn2nd-cont:hover{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+}
+
+.container-2{
+    display: flex;
+}
+.thired-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 3.jpeg) no-repeat center/cover;
+}
+.textThired-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textThired-cont h1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.textThired-cont p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.btnThired-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn3-cont{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn3-cont:hover{
+    background-color: #0071e2;
+
+}
+.btn3rd-cont{
+    background: transparent;
+    color: #047af0;
+    border-radius: 40px;
+    border: 1px solid #047af0;
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn3rd-cont:hover{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+}
+
+.fourth-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 4.jpeg) no-repeat center/cover;
+}
+.textfourth-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textfourth-cont h1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.textfourth-cont p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: -5px;
+}
+.textfourth-cont .p4{
+    font-size: 14px;
+    color: red;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.btnfourth-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn4-cont{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn4-cont:hover{
+    background-color: #0071e2;
+
+}
+.btn4th-cont{
+    background: transparent;
+    color: #047af0;
+    border-radius: 40px;
+    border: 1px solid #047af0;
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn4th-cont:hover{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+}
+.container-3{
+    display: flex;
+}
+.five-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 5.jpeg) no-repeat center/cover;
+}
+.textfivth-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textfivth-cont h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.textfivth-cont p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.textfivth-cont .p5{
+    padding-left: 30px;
+    margin-top: -10px;
+}
+.btnfivth-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn5-cont{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn5-cont:hover{
+    background-color: #0071e2;
+
+}
+.btn5th-cont{
+    background: transparent;
+    color: #047af0;
+    border-radius: 40px;
+    border: 1px solid #047af0;
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn5th-cont:hover{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+}
+
+.sixth-container{
+    width: 50%;
+    height: 70vh;
+    background: url(./assests/pic\ 6.jpeg) no-repeat center/cover;
+}
+.textsixth-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.textsixth-cont h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.textsixth-cont p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: -20px;
+}
+.btnsixth-cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn6-cont{
+    background-color: #047af0;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+.btn6-cont:hover{
+    background-color: #0071e2;
+}
+.container-1, .container-2, .container-3, 
+.first-container, .second-container, 
+.thired-container, .fourth-container, 
+.five-container, .sixth-container {
+    margin: 5px 5px; 
+}
+
+/* carousel  */
+
+.carousel-sec{
+    width: 100%;
+}
+
+/* descript sec */
+
+.descript-sec{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f8;
+    color: rgb(124, 124, 124);
+}
+.innerdes{
+    padding-top: 20px;
+    width: 65%;
+}
+.innerdes p{
+    font-size:12px;
+    line-height: 1.5;
+}
+.innerdes a{
+    color:black;
+}
+
+/* footer  */
+
+.mainFooter {
+    width: 100%;
+    display: flex;
+    background-color:  #f4f4f8;
+    justify-content: center;
+}
+.inner-mainfooter{
+    width: 65%;
+    display: flex;
+    border-top: 2px #0000001a solid;
+    padding-top: 20px;
+}
+.mainFooter ul {
+    list-style: none;
+}
+
+.mainFooter ul li a {
+    color: #000000ad;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+}
+
+.mainFooter ul li {
+    padding: 6px 1px;
+}
+
+.mainFooter ul h3 {
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    outline: none;
+    color: #000000e0;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f8;
+}    
+
+.inner-footercontent{
+    width: 65%;
+    display: flex;
+    font-size: 12px;
+}
+.footer-content p {
+    width: 100%;
+}
+.main-copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f8;;
+}
+.copyright{
+    border-top: 2px #0000001a solid;
+    padding-top: 18px;
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    display: flex;
+    font-size: 12px;
+}
+.copyright i{
+    padding: 4px 5px;
+}
+
+@media (max-width: 946px){
+    .nav-links{
+        display: none;
+    }
+    .nav-logo3{
+        display: block;
+    }
+    .navEnd-logo{
+        display: flex;
+        justify-content: end;
+    }
+}

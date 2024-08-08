@@ -1,0 +1,49 @@
+.header{
+    height: 13vh;
+    font-family: Aldrich, sans-serif;
+    padding: 24px 78px;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: position 1s;
+}
+.pic1{
+    width: 145px;
+    height: 22px;
+    cursor: pointer;
+}
+.div2{
+    width: 60px;
+    margin-left: 26px;
+    flex-shrink: none;
+    cursor: pointer;
+}
+.text{
+    color: black;
+}
+ul{
+    display: flex;
+    margin: 0;
+}
+.li4{
+    list-style: none;
+    color: rgb(23, 23, 23);
+    font-size: 14px;
+    font-family: 400;
+    padding: 5px 8px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width:862px) {
+    .li4{
+        display: none;
+    }
+}
+@media screen and (max-width:426px) {
+    .container-fluid{
+        padding: 40px 15px;
+    }
+}

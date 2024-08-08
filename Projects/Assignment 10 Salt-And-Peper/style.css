@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Lemon', serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+body p {
+    color: #bcbcbc;
+}
+
+body a {
+    text-decoration: none;
+    color: #bcbcbc;
+}
+
+header.container-fluid {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    background-color: black;
+}
+
+.nav-link .fa-solid {
+    background-color: transparent !important;
+}
+.logo1 img {
+    width: 70%;
+    background-color: transparent; 
+}
+
+.heading-box span {
+    font-family: 'futurak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px !important;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.navbar1 ul li {
+    list-style: none;
+}
+
+.navbar1 ul li a {
+    color: #ffffff;
+    padding: 17px 36px 0px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.btn1 {
+    margin: 0px 12px 0px 0px;
+    border-radius: 35px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    padding: 12px 16.5px 12px 16.5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.btn1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn2 {
+    background-color: #ed1c24;
+    border-radius: 35px;
+    border: 1px solid #ed1c24;
+}
+
+.btn2 a {
+    color: #ffffff;
+    padding: 12px 13.5px 12px 13.5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mob-menu {
+    color: white;
+    display: none;
+}
+
+.wel-content h2 {
+    font-family: 'Apercu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+span.logo-text-hold {
+    font-family: 'futurak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 62px;
+    color: #FFFFFF;
+}
+
+.text-change {
+    font-family: 'Lemon', serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.images img {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.islamabd img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.red-font {
+    letter-spacing: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.lahore img {
+    width: 100%;
+    height: 300px;
+}
+
+.transparent {
+    background: transparent;
+}
+
+.box-white {
+    width: 320px;
+    height: 280px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.footer-images img {
+    width: 230px;
+    margin: 5px;
+    margin-bottom: 80px;
+}
+
+.text-grey {
+    font-size: 14px;
+}
+
+.icon-footer i {
+    font-size: 40px;
+    margin: 5px;
+}
+
+.icon-footer i:hover {
+    color: red;
+    transition: .5s ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent !important;
+}
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #bcbcbc; 
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    background-color: #bcbcbc;
+    margin-bottom: 10px;
+}
+
+.container-fluid {
+    padding: 0 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .mob-menu {
+        display: block;
+    }
+    .navbar1 {
+        display: none;
+    }
+    .btn1 {
+        display: none;
+    }
+    .logo1 img {
+        width: 50%;
+    }
+    .btn2 a {
+        color: #ffffff;
+        padding: 8px 6px !important;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .logo1 img {
+        width: 100%;
+    }
+}
+@media (max-width: 325px) {
+    .express-franchies {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .express-franchies .text-center {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .express-franchies img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .express-franchies h3,
+    .express-franchies p {
+        font-size: 14px; 
+    }
+    
+    .express-franchies p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Barlow;
+}
+
+a{
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+.header{
+    display: flex;
+    padding: 5px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.color-main1{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.color-main1 p{
+    margin-left: 5px;
+    font-size: 20px;
+}
+.color-main2{
+    height:36px;
+    width: 265px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.color-main2 p{
+    margin-right: 10px;
+}
+
+.button1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+button{
+    opacity: 0;
+    border: 2px solid rgba(255, 255, 255, 0.733);
+    font-family: Barlow;
+    font-weight: 500;
+    color:  rgba(255, 255, 255, 0.87);
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.01rem;
+    padding: 0.7vw 1.6vw;
+    pointer-events: none;
+    border-radius: 3px;
+    transition: opacity 0.4s;
+}
+.button1:hover button{
+    opacity: 1;
+}
+.color-main3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.color-main3 p{
+    margin-right: 0.5vw;
+}
+
+#sound-icon{
+    padding-top: 5px;
+    font-size: 15px;
+}
+.color-middle {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-middle > div {
+    flex: 1 1 calc(20% - 0px); 
+}
+.color-middle1{
+    height:21.5vh ;
+    width:20vw ;
+    position: relative;
+    background-color: rgb(26, 188, 156);
+}
+.color2{
+    background-color:#2ecc71;
+}
+.color3{
+ background-color:#3498db;
+    
+}
+.color4{
+ background-color:#9b59b6;
+    
+}
+.color5{
+ background-color:#34495e;
+    
+}
+.color6{
+ 
+    background-color:#16a085;
+}
+.color7{
+ 
+   background-color:#27ae60; 
+}
+.color8{
+ background-color:#2980b9;
+    
+}
+.color9{
+ 
+    background-color:#8e44ad;
+}
+.color10{
+ 
+    background-color:#2c3e50;
+}
+.color11{
+ 
+   background-color:#f1c40f; 
+}
+.color12{
+ background-color:#e67e22;
+    
+}
+.color13{
+ background-color:#e74c3c;
+    
+}
+.color14{
+ 
+    background-color:#ecf0f1;
+}
+.color15{
+ 
+    background-color:#95a5a6;
+}
+.color16{
+ background-color:#f39c12;
+    
+}
+.color17{
+ 
+   background-color:#d35400; 
+}
+.color18{
+ background-color:#c0392b;
+    
+}
+.color19{
+ 
+   background-color:#bdc3c7; 
+}
+.color20{
+  background-color:#7f8c8d;  
+}
+.para{
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.89);
+    position: absolute;
+    bottom: 0.5vw;
+    right: 0.5vw;
+}
+
+.bottom{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+span{
+    padding-left: 3px;
+    font-size: 16px;
+}
+@media (max-width: 376px) {
+    .color-main1 p{
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .color-main3 p{
+        font-size: 10px;
+    }
+    .para{
+        display: none;
+    }
+    .color-main2{
+        height: 28px;
+        margin: 5px 10px;
+        width: 180px;
+        font-size: 10px;
+    }
+}
+@media (max-width:426px) {
+    
+    .color-main1 p{
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .color-main3 p{
+        font-size: 12px;
+    }
+    .para{
+        display: none;
+    }
+    .color-main2{
+        height: 28px;
+        margin: 5px 10px;
+        width: 200px;
+        font-size: 12px;
+    }
+}
+@media (max-width:320px) {
+    .color-main1 p{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    .color-main3 p{
+        font-size: 10px;
+    }
+    .para{
+        display: none;
+    }
+    .color-main2{
+        height:26px;
+        margin: 5px 10px;
+        width: 160px; 
+        font-size: 10px;
+    }
+}
+@media (min-width:1024px) and (max-width:2560px) {
+  
+    .color-main3 p{
+        font-size: 20px;
+    }
+    #sound-icon{
+        font-size: 15px;
+    }
+    .para{
+        font-size: 14px;
+    }
+    .color-main2{
+        margin: 0 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .para{
+        display:none;
+    }
+}

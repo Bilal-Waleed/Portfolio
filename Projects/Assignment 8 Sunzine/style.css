@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Aldrich, sans-serif;
+}
+.heading-container{
+    padding-top: 160px;
+    padding-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Aldrich, sans-serif;
+}
+.h22{
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 36px;
+    width: 970px;
+    align-self: center;
+    line-height: 57px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
+    color: rgb(17, 17, 17);
+}
+.div3{
+    font-family: Aldrich, sans-serif;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+.ul1{
+    list-style: disc;
+    flex-wrap: wrap;
+}
+.li1{
+    list-style: none;
+    color: rgb(41, 40, 40);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1px 0px;
+    margin-right: 20px;
+    align-self: center;
+    margin-right: 10px;
+}
+.a{
+    padding-bottom: 4px;
+    font-size: 20px;
+    color: rgb(119, 118, 118);
+}
+.li2{
+    color: black;
+}
+.div4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.pic2{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+.relative{
+    position: relative;
+}
+.absol{
+    font-family: Aldrich, sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    font-family: 600;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+.txt1{
+    font-size: 22px;
+}
+.relative:hover .absol{
+    opacity: 1;
+}
+.spinner-border{
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+.div5{
+    padding: 25px 40px;
+    background-color:  rgb(34, 34, 34);
+    font-family:  Raleway, sans-serif;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+.txt3{
+    color: rgb(183, 183, 183);
+    font-size: 16px;
+}
+span{
+    color: white;
+}
+.pic6{
+    width: 142px;
+    height: 24px;
+}
+.div6 i{
+    color: white;
+    font-size: 20px;
+    margin-left: 8px;
+}
+.div6 i:hover{
+    color:  rgb(14, 206, 145);
+    cursor: pointer;
+}
+.so{
+    color: red;
+
+}
+.so1:hover{
+    color:  rgb(14, 206, 145);
+    cursor: pointer;
+}
+
+/* Media Query */
+
+@media screen and (max-width:426px) {
+    .heading-container{
+        margin-top: 100px;
+    }
+    .h22{
+        font-size: 30px;
+        line-height: 48px;
+    }
+    .div6{
+        margin-left: 130px;
+    }
+}
+@media screen and (max-width:376px){
+    .div6{
+        margin-left: 110px;
+    }
+}
+@media screen and (max-width:321px){
+    .div6{
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width:768px) {
+    .li1{
+        display: inline;
+    }
+    .div6 i{
+        margin-left: 6px;
+    }
+}@media (min-width:50px) and (max-width:576px) {
+    .div4{
+        grid-template-columns: 1fr;
+    }
+    .pic2{
+        height: 40vh;
+    }
+    /* .div6{
+        margin-left: 100px;
+    } */
+    .div6 i{
+        margin-left: 6px;
+    }
+    
+}
+@media (min-width:577px) and (max-width:991px) {
+    .div4{
+        grid-template-columns: 1fr 1fr;
+    }
+    .pic2{
+     height: 45vh;
+    }
+}
+@media (min-width:992px) and (max-width:1365px) {
+    .div4{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .pic2{
+     height: 45vh;
+    }
+}
+@media (min-width:1367px) and (max-width:3000px) {
+    .div4{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .pic2{
+        width: 100%;
+     height: 45vh;
+    }
+}
+@media (min-width:50px) and (max-width:576px) {
+    .txt1{
+        font-size: 20px;
+    }
+}
+@media (min-width:992px) and (max-width:1365px){
+    .txt1{
+        font-size: 17px;
+    }
+}
+@media (min-width:1367px) and (max-width:3000px){
+    .txt1{
+        font-size: 25px;
+    }
+}
+@media (min-width:300px) and (max-width:1024px) {
+    .div5{
+        justify-content: center;
+        text-align: center;
+    }
+    .div6{
+        justify-content: center;
+    }
+}

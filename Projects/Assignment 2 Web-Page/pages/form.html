@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Page | Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <button class="fr-button" type="button"><a href="../index.html">Go-Back</a></button>
+
+    <!-- form start  -->
+
+   
+    <form>
+        <h1 class="fr-heading">Registration <span>- Form</span> :</h1>
+
+        <!-- Hidden Control -->
+
+        <input type="hidden" name="hiddenField" value="hiddenValue">
+
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" maxlength="12" placeholder="Enter your password" required>
+        <br>
+
+        <!-- Email -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+        <br>
+        <!-- Phone number -->
+        <label for="number">Phone Number:</label>
+        <input type="number" id="number" name="Phone number" placeholder="Enter your Phone-number" required>
+        <br>
+
+        <!-- Text Area -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Enter your message" required></textarea>
+        <br>
+
+        <!-- Radio button  -->
+        <br>
+        <label class="radio-box">
+            <label for="male">Male
+                <input type="radio" id="male" name="gender" value="M">
+            </label>
+            <label for="female">Female
+                <input type="radio" id="female" name="gender" value="f">
+            </label>
+            <label for="other">Other
+                <input type="radio" id="other" name="gender" value="o">
+            </label>
+        </label>
+        <br>
+
+        <!-- Checkbox -->
+        <p><b>Select the company name of ur laptop : </b></p> <br>
+        <label class="check-box">
+            <input type="checkbox" name="subscribe" value="newsletter" checked id="Hp">
+            <label for="Hp">Hp</label>
+            <input type="checkbox" name="subscribe" value="newsletter" id="Dell"  >
+            <label for="Dell">Dell</label>
+            <input type="checkbox" name="subscribe" value="newsletter" id="Lenovo" >
+            <label for="Lenovo">Lenovo</label>
+        </label>
+        <br>
+
+        <!-- Drop Down List -->
+        <label for="dropdown">Higher Studies:</label>
+        <select id="dropdown" name="studies">
+            <option value="Matriculation">Matriculation</option>
+            <option value="Intermidiate">Intermidiate</option>
+            <option value="Bacholars">Bacholars</option>
+        </select>
+        <br>
+
+        <!-- Multiple Select Boxes -->
+        <label for="multiselect">Choose ur hobbies:</label>
+        <select id="multiselect" name="hobbies" multiple>
+            <option value="Gaming">Gaming</option>
+            <option value="Coding">Coding</option>
+            <option value="Designing">Designing</option>
+            <option value="cooking">cooking</option>
+            <option value="Reading books">Reading books</option>
+            <option value="Web series">Web series</option>
+        </select>
+        <br>
+
+        <!-- File Input Box -->
+        <label for="file">Upload a file:</label>
+        <input type="file" id="file" name="file">
+        <br>
+
+        <!-- Date Input -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <br>
+
+        <!-- URL Input -->
+        <label for="url">Website:</label>
+        <input type="url" id="url" placeholder="Enter your URL" name="url">
+        <br>
+
+        <!-- Search Input -->
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search" placeholder="Enter Something for Search">
+        <input class="se-button" type="submit" value="Search">
+        <br>
+        <br>
+
+        <!-- Image Button -->
+        <label>Image Button:
+        <input class="im-button" type="image" src="../Assets/img/button 1.jpeg" alt="Submit" width="68" height="28">
+        </label>
+        <br>
+
+        <!-- Submit Button -->
+        <button class="sub-button" type="submit" onclick="alert('Button clicked!')">Submit!</button>
+        <br>
+        <!-- footer -->
+        <div class="social"> 
+            <a href="https://www.facebook.com/profile.php?id=100083382156567" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/bilal._waleed/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/bilal-waleed-2411172bb/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/923042867108" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/Bilal-Waleed" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> Copy Right by Muhammad Bilal Waleed
+        </div>
+    </div>
+    </form> 
+</body>
+</html>

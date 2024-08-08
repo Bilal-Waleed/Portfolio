@@ -1,0 +1,259 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.main{
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-div{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+    width: 87vw;
+    padding-left: 10px;
+    /* background-color: aqua; */
+}
+
+.left-content{
+    /* background-color: yellow; */
+    width: 40%;
+    height: 61%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-left h1{
+    color: #0866ff;
+    font-size: 60px;
+}
+
+.inner-left p{
+    font-size: 28px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 32px;
+    padding-top: 5px;
+}
+
+.responsive-img {
+    display: none; 
+    max-width: 100%;
+}
+
+.right-content {
+    /* background-color: red; */
+    width: 38%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 15px 24px 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+.formContainer form input{
+    outline: none;
+    border: 1px solid #dddfe2;
+    font-size: 17px;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 6px;    
+}
+
+form input::placeholder {
+    color: #8a8a8a; 
+}
+
+form input:focus{
+    border: 2px solid #87b2f7;
+}
+
+form input:focus::placeholder {
+    color:#c2c0c0; 
+}
+
+.loginBtn{
+    background-color: #0866ff;
+    font-weight: bold;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.loginBtn:hover{
+    background-color: #1a71fc;
+}
+
+.formContainer form a{
+    color: #0866ff;
+    font-size: 14px;
+    margin-top: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formContainer form .border{
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    background-color:  #dadde1;
+}
+
+.newAccountBtn{
+    border: none;
+    background-color: #42b72a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px auto;
+    padding: 10px 16px;
+    font-size: 17px;
+    border-radius: 6px;
+    line-height: 28px; 
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #36a420;;
+}
+
+.button-line p{
+    padding-top: 28px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button-line a{
+    color: black;
+    font-family:  Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px){
+    .inner-div{
+        width: 100vw;
+    }
+}
+@media (max-width: 960px){
+    .inner-left h1 {
+        font-size: 40px;
+    }
+    .inner-left p{
+        font-size: 18px;
+    }
+    .right-content{
+        width: 50%;
+       }
+       .button-line p{
+        font-size: 12px;
+       }
+}
+@media (max-width: 800px){
+   .right-content{
+    width: 50%;
+   }
+   .button-line p{
+    font-size: 10px;
+   }
+}
+@media (max-width: 650px){
+    .inner-div{
+        flex-direction: column;
+    }
+    .inner-left p{
+        display: none;
+        margin-bottom: 0px;
+        padding-top: 0p;
+        font-size: 1px;
+    }
+    .inner-left{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .inner-left h1{
+       display: none;
+       font-size: 1px;
+    }
+    .left-content{
+        width: 60%;
+        justify-content: center;
+    }
+    .right-content{
+        width: 90%;
+    }
+    .responsive-img {
+        display: block; 
+        margin-bottom: 20px;
+        height: 100px;
+    }
+}
+@media (max-width: 490px){
+    .inner-left p{
+        display: none;
+        margin-bottom: 0px;
+        padding-top: 0p;
+        font-size: 1px;
+    }
+    .inner-left h1{
+        display: none;
+        font-size: 1px;
+    }
+    .right-content{
+        width: 100%;
+    }
+    .newAccountBtn{
+        font-size: 12px;
+    }
+    .inner-left{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .responsive-img {
+        display: block; 
+        margin-bottom: 20px;
+        height: 80px;
+    }
+    .button-line p{
+        margin-bottom: 300px;
+       }
+}
