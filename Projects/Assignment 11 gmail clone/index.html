@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Clone</title>
+
+    <!-- style.css link  -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="assets/logo-64.png" />
+
+    <!-- font awsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="h-screen flex flex-col md:pb-2 bg-[#f6f9ff] relative">
+
+    <button
+        class="flex md:hidden gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md absolute bottom-4 right-4"><i
+            class="fa-solid fa-pencil text-xl"></i>
+        <p class="text-sm font-semibold">Compose</p>
+    </button>
+
+    <!-- ------------------------- navbar section starts here ---------------------------------- -->
+    <nav class="w-full py-2 flex px-4 text-gray-600 justify-between">
+
+        <!-- navbar left content  -->
+        <div class="flex items-center w-[70%] justify-between gap-3">
+            <div class="flex gap-1 items-center">
+                <button class="h-10 w-10 grid place-content-center rounded-full hover:bg-gray-200"><i
+                        class="fa-solid fa-bars text-lg"></i></button>
+                <div>
+                    <img class="h-9" src="./assets/gmail-logo.png" alt="">
+                </div>
+            </div>
+
+            <div
+                class=" hidden group md:flex h-full items-center rounded-full p-1 bg-[#e5f1ff] gap-2 w-[80%] max-w-2xl hover:drop-shadow-md hover:bg-white">
+                <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <input class="h-full focus:outline-none bg-[#e5f1ff] py-2 w-full group-hover:bg-white" type="text"
+                    name="saerch" id="saerch" placeholder="Search mail">
+                <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                        class="fa-solid fa-sliders"></i></button>
+            </div>
+        </div>
+        <!-- navbar left content end here -->
+
+        <!-- navbar right content  -->
+        <div class="flex items-center gap-2">
+            <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                    class="fa-regular fa-circle-question"></i></button>
+            <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                    class="fa-solid fa-gear"></i></button>
+            <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                    class="fa-solid fa-list-ul"></i></button>
+            <button class="grid place-content-center rounded-full hover:bg-gray-200 w-7 overflow-hidden"><img
+                    src="./assets/my pic.jpg" alt="manikmaity"></button>
+        </div>
+        <!-- navbar right content ends here -->
+    </nav>
+    <!-- ---------------------------- navbar section ends here -----------------------------------  -->
+
+
+
+
+    <!------------------------------- gmail main section starts here ------------------------------  -->
+    <div class="h-full w-full  grid grid-cols-10">
+
+        <!-- ------------------------- gmail left sidebar starts here --------------------- -->
+        <div class="self-start sticky top-0 col-span-2 h-full mr-2 hidden md:block">
+            <button class="flex gap-4 py-4 px-5 items-center bg-sky-200 ml-2 mt-2 rounded-2xl hover:drop-shadow-md"><i
+                    class="fa-solid fa-pencil text-xl"></i>
+                <p class="text-sm font-semibold">Compose</p>
+            </button>
+
+            <ul class="w-full text-sm my-3">
+                <li class="w-full"><a
+                        class=" font-semibold w-full flex leading-none bg-blue-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-solid fa-inbox"></i>
+                        <p class="flex w-full justify-between">Inbox <span>3,256</span></p>
+                    </a></li>
+                <li class="w-full"><a
+                        class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-regular fa-star"></i>
+                        <p class="flex w-full justify-between">Starred</p>
+                    </a></li>
+                <li class="w-full"><a
+                        class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-regular fa-clock"></i>
+                        <p class="flex w-full justify-between">Snoozed</p>
+                    </a></li>
+                <li class="w-full"><a
+                        class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-regular fa-paper-plane"></i>
+                        <p class="flex w-full justify-between">Sent</p>
+                    </a></li>
+                <li class="w-full"><a
+                        class=" font-semibold w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-regular fa-file"></i>
+                        <p class="flex w-full justify-between">Draft <span class="opacity-60">37</span></p>
+                    </a></li>
+                <li class="w-full"><a
+                        class="w-full flex leading-none hover:bg-gray-200 pl-6 py-2 gap-3 items-center rounded-e-full pr-2"
+                        href="#"><i class="fa-solid fa-angle-down"></i>
+                        <p class="flex w-full justify-between">More</p>
+                    </a></li>
+            </ul>
+            <div class="flex justify-between py-3 pl-6">
+                <p class="text-lg font-semibold">Labels</p>
+                <button class="grid place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                        class="fa-solid fa-plus"></i></button>
+            </div>
+
+        </div>
+        <!-- ------------------------- gmail left sidebar ends here --------------------- -->
+
+
+        <!-- ------------------------- gmail right main contents start here -------------------------  -->
+        <div class="bg-white h-full col-span-10 md:col-span-8 rounded-2xl mx-2 flex flex-col">
+
+            <!-- --------------------------sticky section start--------------------  -->
+            <div class="bg-white w-full sticky top-0 flex py-2 px-4 text-gray-600 text-[0.7rem] justify-between">
+
+                <!-- right  -->
+                <div class="flex gap-1">
+                    <div class="flex gap-1">
+                        <input class="py-auto px-2" type="checkbox" name="select" id="select">
+                        <button
+                            class="grid place-content-center rounded-full hover:bg-gray-200  text-gray-700 px-1 h-full"><i
+                                class="fa-solid fa-caret-down"></i></button>
+                    </div>
+                    <button class="grid place-content-center rounded-full hover:bg-gray-200 p-3"><i
+                            class="fa-solid fa-rotate-right"></i></button>
+                    <button class="grid place-content-center rounded-full hover:bg-gray-200 py-3 px-4"><i
+                            class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+
+                <!-- left  -->
+                <div class="flex gap-1">
+                    <div class="flex items-center h-full rounded-md px-2 cursor-pointer hover:bg-gray-200">
+                        <p>1-50 of 3,324</p>
+                    </div>
+                    <button class="grid place-content-center rounded-full hover:bg-gray-200 p-3"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <button class="grid place-content-center rounded-full hover:bg-gray-200 p-3"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+
+            </div>
+            <!-- --------------------------sticky section end --------------------  -->
+
+
+
+            <!-- ------------------------ Scrolable main section starts here ------------------------  -->
+            <div class="scrolable-width overflow-y-scroll overflow-x-hidden">
+
+                <!-- ----------------- Mail Catergory select Section start--------------------  -->
+                <div
+                    class="hidden md:flex h-12 text-sm font-medium leading-none text-gray-600 border-b border-gray-200">
+                    <button
+                        class="flex h-full w-52 items-center px-4 gap-4 text-blue-600 border-b-[3px] border-blue-600">
+                        <i class="fa-solid fa-inbox"></i>
+                        <p>Primary</p>
+                    </button>
+
+                    <button class="flex h-full w-52 items-center px-4 gap-4 hover:bg-gray-200">
+                        <i class="fa-solid fa-tag"></i>
+                        <div class="flex flex-col text-start">
+                            <p>Promotions <span class="text-xs px-1 leading-none text-white rounded-full" style="background-color: green;">38
+                                    new</span></p>
+                            <p class="text-xs font-normal text-gray-400">FlexBox, LinkTree, LinkedIn..</p>
+                        </div>
+                    </button>
+
+                    <button
+                        class="flex h-full w-52 items-center px-4 gap-4 hover:bg-gray-200 overflow-hidden text-ellipsis whitespace-nowrap">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="flex flex-col text-start">
+                            <p>Social <span class="text-xs px-1 leading-none bg-blue-600 text-white rounded-full">50
+                                    new</span></p>
+                            <p class="text-xs font-normal text-gray-400">Facebook, LinkedI, Twit..</p>
+                        </div>
+                    </button>
+
+                </div>
+                <!-- ----------------- Mail Catergory select Section end --------------------  -->
+
+                <!-- ------------------------ all mails sections starts here----------------------  -->
+                <div class="flex flex-col h-full">
+
+                    <!-- ------------------- mail  ribbon starts here ------------ -->
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">FlexBox</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Join Our Live Class on Java Script Fundamentals📊
+                                </p>
+                                <p class="text-black">- Dear Students,
+
+                                    I hope this message finds you well. We're thrilled to invite you to our upcoming
+                                    live class on Javascript fundamentals.💫</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>07:00</p>
+                        </div>
+
+                    </div>
+                    <!-- ------------------- mail  ribbon ends here ------------ -->
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">FlexBox</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Job Guarantee course Program</p>
+                                <p class="text-black">- Hey Manik,
+
+                                    After placing 3000+ students at our partner companies, we have analyzed all the
+                                    things required to get a high-paying Job & compiled them under our placement
+                                    guarantee course program.</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>05:12</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">Github</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">This Is Exactly What You're Looking For!</p>
+                                <p class="text-black">- Hello Authors,
+
+
+                                    We understand that it can be challenging when your articles are stuck in the review
+                                    process. But, hey, our GeeksforGeeks Community has your back!</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>03:31</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 21</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1 overflow-hidden text-ellipsis whitespace-nowrap">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Farid Ahmed from our course program got placed
+                                    successfully</p>
+                                <p class="text-black">- Hey Manik,
+
+                                    Farid Ahmed from our course has been successfully placed after completing our course
+                                    program. Listen to what </p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 21</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">Internshala</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Manik, new internships in Re.Act Waste Tech Pvt.
+                                    Ltd, Intesome & more </p>
+                                <p class="text-black">- Hi Manik,
+                                    Here are some of the latest opportunities matching your preferences. Apply now!</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 21</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">Google</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Stop Telling People Everything | Oyinade</p>
+                                <p class="text-black">- Medium daily digest
+                                    TODAY'S HIGHLIGHTS</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 21</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 20</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 20</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkTree</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">"tell me your favourite song and ill guess yo..."
+                                </p>
+                                <p class="text-black">- r/teenagers · Posted by u/lameyisfamey 13h ago
+                                    tell me your favourite song and ill guess your favourite colour</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Talal just messaged you</p>
+                                <p class="text-black">- 1 new message awaits your response</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">FlexBox</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">I am 5'9" tall and a male, but when I walk next to a
+                                    girl taller than me, I feel very...?</p>
+                                <p class="text-black">- I am 5'9" tall and a male, but when I walk next to a girl taller
+                                    than me, I feel very...?</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 18</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="flex h-9 px-2 items-center text-sm border-b border-gray-200 hover:shadow-md cursor-pointer md:py-0 py-6">
+                        <!-- mail right section  -->
+                        <div class="flex text-gray-600 h-full leading-none items-center font-semibold w-1/5 py-1">
+                            <div class="md:grid place-content-center h-full w-8 rounded-full hover:bg-gray-200 hidden">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <button class="md:grid hidden place-content-center rounded-full hover:bg-gray-200 p-2"><i
+                                    class="fa-regular fa-star"></i></button>
+                            <p class="text-black ml-1">LinkedIn</p>
+
+                        </div>
+
+                        <!-- mail middle sections  -->
+                        <div class="flex leading-none items-center py-1 px-2 w-[70%] h-full justify-between">
+                            <div class="flex w-[98%] overflow-hidden text-ellipsis whitespace-nowrap">
+                                <p class="text-black font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima a voluptates itaque animi officia, ab nemo maxime at earum sapiente maiores placeat laboriosam? Sunt beatae dolor ducimus consequatur vero error.</p>
+                                <p class="text-black">- See Monindra's and other people's connections, experience, and
+                                    more</p>
+                            </div>
+                            <p class="w-[2%]">...</p>
+                        </div>
+
+                        <!-- mail right section  -->
+                        <div
+                            class="flex leading-none items-center py-1 px-2 w-[10%] h-full font-semibold text-black justify-end ml-[10px]">
+                            <p>AUG 8</p>
+                        </div>
+
+                    </div>
+
+                    <!-- <aside>
+                        <div class="aside_icons">
+                          <img src="./assets/calendar-48.png" alt="" class="hover" />
+                          <img src="./assets/keep-48.png" alt="" class="hover" />
+                          <img src="./assets/task-48.png" alt="" class="hover" />
+                          <img src="./assets/account-48.png" alt="" class="hover" />
+                          <span></span>
+                          <ion-icon name="add" class="hover"></ion-icon>
+                
+                          <div>
+                            <ion-icon name="chevron-forward-outline" class="hover"></ion-icon>
+                          </div>
+                        </div>
+                      </aside>   -->
+
+                </div>
+                <!-- ------------------------ all mails sections starts here----------------------  -->
+
+            </div>
+            <!-- ------------------------ Scrolable main section ends here ------------------------  -->
+
+        </div>
+        <!-- ------------------------- gmail right main contents ends here -------------------------  -->
+
+
+
+    </div>
+    <!------------------------------- gmail main section ends here ------------------------------  -->
+
+</body>
+
+</html>
